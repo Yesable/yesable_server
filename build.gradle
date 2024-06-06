@@ -1,7 +1,11 @@
 buildscript {
     ext {
+        // 플러그인 버전
         queryDslVersion = "5.0.0"
-        querydslPluginVersion = '1.0.10' // 플러그인 버전
+        querydslPluginVersion = '1.0.10'
+        grpcVersion = '1.58.0'
+        protobufPluginVersion = '0.8.18'
+
     }
 }
 
@@ -9,6 +13,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.2.5'
     id 'io.spring.dependency-management' version '1.1.4'
+    id 'com.google.protobuf' version "${protobufPluginVersion}"
 }
 
 group = 'com.example'
@@ -36,6 +41,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    // GRPC
+    implementation "io.grpc:grpc-protobuf:${grpcVersion}"
+    implementation "io.grpc:grpc-stub:${grpcVersion}"
     // swagger
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
     //lombok
@@ -67,6 +75,8 @@ dependencies {
     implementation 'org.mapstruct:mapstruct:1.5.3.Final'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 }
+def generatedFilesBaseDir = "${projectDir}/generated/source/proto"
+
 
 test {
     useJUnitPlatform()
@@ -83,7 +93,7 @@ sourceSets {
     main.java.srcDirs += [ querydslDir ]
 }
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
     options.getGeneratedSourceOutputDirectory().set(file(querydslDir))
 }
 
