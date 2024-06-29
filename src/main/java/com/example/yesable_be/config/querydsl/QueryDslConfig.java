@@ -1,4 +1,4 @@
-package com.example.yesable_be.config;
+package com.example.yesable_be.config.querydsl;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
