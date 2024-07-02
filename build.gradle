@@ -42,8 +42,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     // GRPC
     implementation "io.grpc:grpc-netty:${grpcVersion}"
+    implementation "io.grpc:grpc-services:${grpcVersion}"
     implementation "io.grpc:grpc-protobuf:${grpcVersion}"
     implementation "io.grpc:grpc-stub:${grpcVersion}"
+
     implementation 'net.devh:grpc-spring-boot-starter:2.12.0.RELEASE'
     implementation 'net.devh:grpc-server-spring-boot-starter:2.12.0.RELEASE'
     // swagger
@@ -130,6 +132,11 @@ sourceSets {
         java {
             srcDirs "${generatedFilesBaseDir}/main/grpc"
             srcDirs "${generatedFilesBaseDir}/main/java"
+
         }
     }
+    /*
+    test {
+        //여기도 srcDirs 설정해야 test에도 동작
+    }*/
 }
