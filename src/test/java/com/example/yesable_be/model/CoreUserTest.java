@@ -1,14 +1,13 @@
 package com.example.yesable_be.model;
 
-import com.example.yesable_be.model.CoreUser;
-import com.example.yesable_be.repository.UserRepository;
+import com.example.yesable_be.model.entity.mariadb.CoreUser;
+import com.example.yesable_be.repository.mariadb.UserRepository;
 import com.example.yesable_be.enums.Gender;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
 import java.util.Optional;
