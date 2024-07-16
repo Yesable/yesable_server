@@ -29,7 +29,7 @@ import java.util.Map;
 @EnableJpaRepositories(
         basePackages = {"com.example.yesable_be.repository.mariadb"}
 )
-@EntityScan(basePackages = {"com.example.yesable_be.model.entity.mairadb"})
+@EntityScan(basePackages = {"com.example.yesable_be.model.entity.mariadb"})
 public class MariaDataSourceConfig {
 
     private final JpaProperties jpaProperties;
@@ -59,7 +59,7 @@ public class MariaDataSourceConfig {
 
         return builder
                 .dataSource(dataSource())
-                .packages("com.example.yesable_be.entity.maira")
+                .packages("com.example.yesable_be.model.entity.mariadb")
                 .persistenceUnit("entityManager")
                 .properties(properties)
                 .build();

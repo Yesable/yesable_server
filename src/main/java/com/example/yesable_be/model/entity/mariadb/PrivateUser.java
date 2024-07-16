@@ -1,4 +1,4 @@
-package com.example.yesable_be.model;
+package com.example.yesable_be.model.entity.mariadb;
 
 
 

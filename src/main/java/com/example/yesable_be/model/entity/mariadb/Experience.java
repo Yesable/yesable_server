@@ -1,4 +1,4 @@
-package com.example.yesable_be.model;
+package com.example.yesable_be.model.entity.mariadb;
 
 import com.example.yesable_be.enums.Experiencetype;
 import jakarta.persistence.*;
