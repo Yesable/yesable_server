@@ -1,8 +1,7 @@
-package com.example.yesable_be.model;
+package com.example.yesable_be.model.entity.mariadb;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
 
 @Entity
 @Data
