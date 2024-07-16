@@ -1,4 +1,4 @@
-name: Gradle Build
+name: develop Branch PR Test
 
 on:
   pull_request:
