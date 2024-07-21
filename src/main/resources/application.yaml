@@ -24,7 +24,6 @@ mongo:
   data:
     mongodb:
       uri: mongodb+srv://_MONGODB_USER_:_MONGODB_PW_@cluster0.jtyq2af.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-      database: yesable
       username: yesable
       password: yesableadmin!
       connections-per-host: 5
