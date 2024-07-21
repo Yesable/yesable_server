@@ -5,6 +5,12 @@ spring:
   config:
     activate:
       on-profile: local
+  data:
+    mongodb:
+      uri: mongodb+srv://_MONGODB_USER_:_MONGODB_PW_@cluster0.jtyq2af.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: yesable
+      username: yesable
+      password: yesableadmin!
   datasource:
     url: jdbc:mariadb://database-2.c1cqmw8q803p.ap-northeast-2.rds.amazonaws.com:3306/innodb
     username: yesable
@@ -19,20 +25,6 @@ spring:
           dialect: org.hibernate.dialect.MariaDBDialect
           format_sql: true
           use_sql_comments: true
-
-mongo:
-  data:
-    mongodb:
-      uri: mongodb+srv://_MONGODB_USER_:_MONGODB_PW_@cluster0.jtyq2af.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-      username: yesable
-      password: yesableadmin!
-      connections-per-host: 5
-      connect-timeout: 30000
-      max-wait-time: 1500
-      max-connection-idle-time: 21600000
-      min-connections-per-host: 2
-      server-selection-timeout: 50000
-      socket-timeout: 30000
 
 jwt:
   secret: secretKey-authorization-jwt-manage-token
