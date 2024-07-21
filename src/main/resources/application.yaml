@@ -23,8 +23,17 @@ spring:
 mongo:
   data:
     mongodb:
-      uri: mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.9
+      uri: mongodb+srv://_MONGODB_USER_:_MONGODB_PW_@cluster0.jtyq2af.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
       database: yesable
+      username: yesable
+      password: yesableadmin!
+      connections-per-host: 5
+      connect-timeout: 30000
+      max-wait-time: 1500
+      max-connection-idle-time: 21600000
+      min-connections-per-host: 2
+      server-selection-timeout: 50000
+      socket-timeout: 30000
 
 jwt:
   secret: secretKey-authorization-jwt-manage-token
