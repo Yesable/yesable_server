@@ -19,6 +19,9 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: Create resources directory if it does not exist
+        run: mkdir -p ./src/main/resources
+
       - name: create application.yml
         run: echo "${{ secrets.APPLICATION_PROPERTIES }}" > ./src/main/resources/application.yml
 
