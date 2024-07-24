@@ -1,4 +1,4 @@
-package com.example.yesable_be.enums;
+package com.example.yesable_be.enums.user;
 
 public enum Interestfield { //알바천국 업직종 기준
     FOOD, //요식업

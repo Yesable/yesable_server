@@ -1,6 +1,6 @@
-package com.example.yesable_be.model.entity.mariadb;
+package com.example.yesable_be.model.entity.mariadb.user;
 
-import com.example.yesable_be.enums.Experiencetype;
+import com.example.yesable_be.enums.user.Experiencetype;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -12,7 +12,7 @@ public class Experience {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long experienceSeq;
 
     @ManyToOne
     @JoinColumn(name = "private_user_id")
@@ -20,13 +20,15 @@ public class Experience {
 
     @Enumerated(EnumType.STRING)
     private Experiencetype experiencetype;
+
     private String companyname;
 
-
     private LocalDate startDate;
-    private LocalDate endDate;
-    private String department; //직무 종류
-    private String jobDescription; //주요 업무 내용
 
+    private LocalDate endDate;
+
+    private String department; //직무 종류
+
+    private String jobDescription; //주요 업무 내용
 
 }

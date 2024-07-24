@@ -1,4 +1,4 @@
-package com.example.yesable_be.enums;
+package com.example.yesable_be.enums.user;
 
 public enum Worktype { //알바천국 기준
     PARTTIMEJOB, //알바

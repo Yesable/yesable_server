@@ -1,4 +1,4 @@
-package com.example.yesable_be.enums;
+package com.example.yesable_be.enums.user;
 
 public enum Compclass {
     SMALL, //중소기업

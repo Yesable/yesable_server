@@ -1,8 +1,8 @@
 package com.example.yesable_be.model;
 
-import com.example.yesable_be.model.entity.mariadb.CoreUser;
+import com.example.yesable_be.model.entity.mariadb.user.CoreUser;
 import com.example.yesable_be.repository.mariadb.UserRepository;
-import com.example.yesable_be.enums.Gender;
+import com.example.yesable_be.enums.user.Gender;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -39,7 +39,7 @@ class CoreUserTest {
     @DisplayName("Should correctly save and retrieve CoreUser")
     void saveAndRetrieveCoreUser() {
         userRepository.save(coreUser);
-        Optional<CoreUser> retrievedUser = userRepository.findById(coreUser.getId());
+        Optional<CoreUser> retrievedUser = userRepository.findById(coreUser.getUserSeq());
         assertTrue(retrievedUser.isPresent());
         assertEquals(coreUser, retrievedUser.get());
     }

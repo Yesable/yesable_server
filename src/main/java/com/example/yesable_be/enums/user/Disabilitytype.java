@@ -1,4 +1,4 @@
-package com.example.yesable_be.enums;
+package com.example.yesable_be.enums.user;
 
 public enum Disabilitytype { //장애인 복지법에서 정의하는 15가지 분류
     // Physical Disabilities - External

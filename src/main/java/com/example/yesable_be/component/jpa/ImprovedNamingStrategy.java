@@ -19,7 +19,7 @@ public class ImprovedNamingStrategy implements PhysicalNamingStrategy {
 
     @Override
     public Identifier toPhysicalTableName(Identifier name, JdbcEnvironment jdbcEnvironment) {
-        if (jdbcEnvironment.getCurrentCatalog().toString().equals("HELLO_COCONE")) {
+        if (jdbcEnvironment.getCurrentCatalog().toString().equals("innodb")) {
             return Identifier.toIdentifier(camelToSnake(name).getText().toUpperCase());
         }
         return Identifier.toIdentifier(name.toString());
